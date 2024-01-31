@@ -6,14 +6,74 @@ body {
 
 a {
   text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-ul,
-ol {
-  list-style: none;
+ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.conteiner {
+  width: 100%;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+
+/* .container { 
+max-width: 
+padding-left:  
+padding-right:  
+margin-left:  
+margin-right:  
+} */
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 /** ==========HEADER========== */
+
+.header {
+}
+
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
 
 .logo {
   color: #4d5ae5;
@@ -23,44 +83,56 @@ ol {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
 .logo-part {
   color: #2e2f42;
 }
 
-.navigation li {
+.nav-link {
   color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  display: flex;
+  gap: 40px;
 }
 
-.nav-link {
+.nav-link-list {
   color: #2e2f42;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
-.nav-link:hover,
-.nav-link:active,
-.nav-link:focus {
+.nav-link-list:hover,
+.nav-link-list:active,
+.nav-link-list:focus {
   color: #404bbf;
 }
 
 .address {
   font-style: normal;
+  display: block;
 }
 
-.address-link {
+.address-list {
+  display: flex;
+  gap: 40px;
+}
+
+.address-list-link {
   color: #434455;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 
-.address-link:hover,
-.address-link:active,
-.address-link:focus {
+.address-list-link:hover,
+.address-list-link:active,
+.address-list-link:focus {
   color: #404bbf;
 }
 
@@ -70,6 +142,11 @@ ol {
 
 .boarder {
   background-color: #2e2f42;
+  padding: 188px 0;
+}
+
+.boarder-conteiner {
+  /* padding: 188px 0; */
 }
 
 .boarder-title {
@@ -79,6 +156,8 @@ ol {
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
+  max-width: 496px;
+  margin: 0 auto 48px auto;
 }
 
 .boarder-btn {
@@ -90,6 +169,11 @@ ol {
   letter-spacing: 0.04em;
   background-color: #4d5ae5;
   cursor: pointer;
+  padding: 16px 32px;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: block;
+  min-width: 169px;
 }
 
 .boarder-btn:hover,
@@ -102,23 +186,42 @@ ol {
 
 /** ==========STRATEGY========== */
 
-.strategy-title {
-  color: #2e2f42;
-  text-align: center;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
+.strategy {
 }
 
-.strategy-list h3 {
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.strategy-list {
+  display: flex;
+  gap: 24px;
+}
+
+.strategy-list-li {
+  width: calc((100% - 3 * 24px) / 4);
+}
+
+.strategy-list-title {
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
-.strategy-list p {
+.strategy-list-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -131,6 +234,7 @@ ol {
 .team {
   background-color: #f4f4fd;
 }
+
 .team-title {
   color: #2e2f42;
   text-align: center;
@@ -138,28 +242,52 @@ ol {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
-.team-list h3 {
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.team-list-li {
+  background-color: #ffffff;
+  width: calc(calc(100% - 72px) / 4);
+}
+
+.team-list-img {
+}
+
+.team-text-conteiner {
+  padding: 32px 0;
+}
+
+.team-list-title {
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
-.team-list p {
+.team-list-text {
   color: #434455;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
-.team-list li {
-  background-color: #ffffff;
-}
 /* ------------------------------ */
 
 /** ==========PORTFOLIO========== */
+
+.portfolio {
+  display: flex;
+  align-items: center;
+}
 
 .portfolio-title {
   color: #2e2f42;
@@ -168,17 +296,36 @@ ol {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
-.portfolio-list h3 {
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.portfolio-list-li {
+}
+
+.portfolio-list-img {
+}
+
+.conteiner-app {
+  padding: 32px 16px;
+}
+
+.portfolio-list-title {
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
-.portfolio-list p {
+.portfolio-list-text {
   color: #434455;
   font-size: 16px;
   line-height: 1.5;
@@ -191,6 +338,7 @@ ol {
 
 .footer {
   background-color: #2e2f42;
+  padding: 100px 0;
 }
 
 .footer-logo {
@@ -201,10 +349,12 @@ ol {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 17.5px;
 }
 
 .footer-logo-part {
-  color: var(--CLOUD, #f4f4fd);
+  color: #f4f4fd;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -213,11 +363,12 @@ ol {
   text-transform: uppercase;
 }
 
-.footer p {
+.footer-text {
   color: #f4f4fd;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  max-width: 264px;
 }
 
 /* ------------------------------ */
